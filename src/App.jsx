@@ -72,11 +72,13 @@ const AppContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-purple-900">
       <Header showAdmin={showAdmin} setShowAdmin={setShowAdmin} />
       
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <SearchBar />
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="mb-8">
+          <SearchBar />
+        </div>
         
         {showAdmin && (
           <AdminPanel onAddProfile={handleAddProfile} />

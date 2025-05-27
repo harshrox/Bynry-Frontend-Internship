@@ -152,7 +152,7 @@ const MapComponent = ({ profile }) => {
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-white bg-opacity-20 p-2 rounded-full">
+            <div className="bg-opacity-20 p-2 rounded-full">
               <MapPin size={20} />
             </div>
             <div>
@@ -163,17 +163,10 @@ const MapComponent = ({ profile }) => {
           <div className="flex space-x-2">
             <button
               onClick={centerMap}
-              className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-colors"
+              className="bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-colors"
               title="Center on location"
             >
               <Navigation size={16} />
-            </button>
-            <button
-              onClick={zoomToFit}
-              className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-colors"
-              title="Zoom out"
-            >
-              <Maximize2 size={16} />
             </button>
           </div>
         </div>
@@ -186,20 +179,6 @@ const MapComponent = ({ profile }) => {
           className="h-96 w-full"
           style={{ minHeight: '400px' }}
         />
-        
-        {/* Coordinates overlay */}
-        <div className="absolute bottom-4 left-4 bg-white bg-opacity-90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
-          <div className="text-xs text-gray-600 mb-1">Coordinates</div>
-          <div className="font-mono text-sm text-gray-800">
-            <div>Lat: {parseFloat(safeProfile.lat).toFixed(6)}</div>
-            <div>Lng: {parseFloat(safeProfile.lng).toFixed(6)}</div>
-          </div>
-        </div>
-
-        {/* Map attribution */}
-        <div className="absolute bottom-4 right-4 bg-white bg-opacity-90 backdrop-blur-sm rounded-lg px-2 py-1 text-xs text-gray-600">
-          Powered by OpenStreetMap
-        </div>
       </div>
 
       {/* Info footer */}
