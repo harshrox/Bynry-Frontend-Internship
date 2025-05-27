@@ -2,6 +2,10 @@
 
 A React application built with Vite that allows users to view profiles and explore their addresses on an interactive map interface.
 
+## Live Site
+
+[Click here to visit the live site](https://bynry-frontend-internship.vercel.app/)
+
 ## Features
 
 - **Profile Display**: View a collection of profiles with photos, names, descriptions and addresses
