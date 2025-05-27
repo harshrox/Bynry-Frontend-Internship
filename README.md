@@ -1,12 +1,74 @@
-# React + Vite
+# Profile Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with Vite that allows users to view profiles and explore their addresses on an interactive map interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Profile Display**: View a collection of profiles with photos, names, descriptions and addresses
+- **Interactive Mapping**: Click "Summary" to view location details
+- **Search & Filter**: Search profiles by name, description or location
+- **Admin Panel**: Add, edit and delete profiles with admin toggle
+- **Profile Details**: Detailed view with contact information and interests
+- **Responsive Design**: Mobile-friendly interface
+- **Loading Indicators**: Smooth loading states for better UX
+- **Form Validation**: Robust form validation with error handling
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. **Create the Project Structure**
+
+```bash
+npm create vite@latest profile-map-app -- --template react
+cd profile-map-app
+```
+
+### 2. **Install Dependencies**
+
+```bash
+npm install
+npm install lucide-react
+npm install tailwindcss @tailwindcss/vite
+```
+
+### 3. **Configure the Vite Plugin**
+
+Edit your `vite.config.ts` (or `vite.config.js`):
+
+```ts
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+```
+
+### 4. **Import Tailwind in CSS**
+
+In your main CSS file (e.g., `src/index.css` or `src/main.css`), add:
+
+```css
+@import "tailwindcss";
+```
+
+### 5. **Start the Development Server**
+
+```bash
+npm run dev
+```
+
+## Features Implementation
+
+### Core Requirements 
+- Profile Display with essential information
+- Interactive mapping component using OpenStreetMap with Leaflet
+- Summary button functionality
+- User-friendly experience
+- Profile data management (CRUD)
+- Search and filter functionality
+- Responsive design
+- Error handling and validation
+- Loading indicators
+- Profile details view
